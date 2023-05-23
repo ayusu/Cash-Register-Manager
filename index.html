@@ -10,13 +10,22 @@
 <body>
     <div class="container">
         <h1>Cash Register</h1>
-        <h1>Enter the total amount to be paid</h1>
-        <input type="text" id="Bill-amount"/>
-        <h2>Total amount given by the user</h2>
-        <input type="text" id="cash-given"/><br>
+        <p class="description">
+          Enter the bill amount and cash given by the customer <br/> to know the number of amount to be returned
+        </p>
+        <label for="bill-amount">Bill Amount</label>
+        <input type="number" id="Bill-amount"/>
+        <button id="enter-cash">Next</button>
+        <div id="cash-container">
+        <label for="cash-paid">Cash Given</label>
+        <input type="number" id="cash-given"/>  
         <button id="calculate">Calculate</button>
-        <h1>Total amount to be returned</h1>       
-        <table>
+        <p id="Error-message"></p>
+        </div>    
+        <table class="change-table" id="show-amount">
+          <caption>
+            Return Change
+          </caption>
             <thead>
               <tr>
                 <th>Curreny</th>
@@ -32,13 +41,13 @@
             <tbody>
               <tr>
                 <td>Number of notes to be returned</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="No-of-notes"></td>
+                <td class="No-of-notes"></td>
+                <td class="No-of-notes"></td>
+                <td class="No-of-notes"></td>
+                <td class="No-of-notes"></td>
+                <td class="No-of-notes"></td>
+                <td class="No-of-notes"></td>
               </tr>
             </tbody>
           </table>       
