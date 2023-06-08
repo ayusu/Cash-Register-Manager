@@ -17,7 +17,7 @@ next.addEventListener("click", function showCashContainer(){
 const btn = document.querySelector("#calculate")
 btn.addEventListener('click', ()=> {
     message.style.display = "none"
-    if (billamount.value > 0 ){
+    if (billamount.value > 0){
         if (cashGiven.value >= billamount.value)  {
             const cashToBeReturned = cashGiven.value - billamount.value
             calculate(cashToBeReturned)
@@ -35,6 +35,7 @@ function calculate(cashToBeReturned) {
         const numberOfNotes = Math.trunc(cashToBeReturned / typeOfNotes[i])
         cashToBeReturned %= typeOfNotes[i]
         noOfNotes[i].innerText = numberOfNotes
+        
     }
 
 }
